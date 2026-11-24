@@ -1,0 +1,226 @@
+
+
+# ============================================================
+# C / C++ COMPILATION ARTIFACTS
+# ============================================================
+
+# Object and compiled files
+*.o
+*.obj
+*.lo
+*.a
+*.la
+*.so
+*.so.*
+*.dylib
+*.dll
+*.lib
+*.exe
+*.out
+*.app
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Compiler-generated dependency files
+*.d
+*.dep
+
+# Core dumps
+core
+core.*
+*.core
+
+# ============================================================
+# BUILD DIRECTORIES
+# ============================================================
+
+# Common build output directories (at any nesting level)
+/build/
+/build-*/
+/_build/
+/cmake-build-*/
+/out/
+/bin/
+/obj/
+/debug/
+/release/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+Makefile.cmake
+
+# ============================================================
+# MAKE / AUTOTOOLS
+# ============================================================
+
+# Generated Makefiles
+Makefile
+makefile
+GNUmakefile
+
+# Autotools generated files
+autom4te.cache/
+aclocal.m4
+config.h
+config.h.in
+config.log
+config.status
+configure
+libtool
+ltmain.sh
+missing
+install-sh
+depcomp
+compile
+m4/
+*.in
+
+# Generated configuration
+config.cache
+config.guess
+config.sub
+
+# ============================================================
+# DEBUGGING / PROFILING
+# ============================================================
+
+# GDB
+.gdb_history
+.gdbinit.local
+
+# Valgrind
+vgcore.*
+valgrind.log
+massif.out.*
+
+# Profiling
+gmon.out
+*.prof
+*.profraw
+*.profdata
+perf.data
+perf.data.old
+callgrind.out.*
+cachegrind.out.*
+
+# Sanitizers
+asan.log
+ubsan.log
+tsan.log
+
+# ============================================================
+# TEST OUTPUT / TEMPORARY FILES
+# ============================================================
+
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+*.pid
+
+# Test binaries and generated test output
+test-output/
+test-results/
+coverage/
+*.gcda
+*.gcno
+*.gcov
+lcov.info
+
+# ============================================================
+# OPERATING SYSTEM FILES
+# ============================================================
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Windows (if working across platforms)
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================
+# EDITORS / IDEs
+# ============================================================
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# JetBrains
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+*.un~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================
+# TOOLING / ENVIRONMENT
+# ============================================================
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local configuration
+*.local
+.local/
+
+# CTags / CScope
+tags
+TAGS
+cscope.out
+cscope.in.out
+cscope.po.out
+
+# Clang tooling
+.clangd/
+.clang-tidy-cache/
+
+# ============================================================
+# GENERATED DOCUMENTATION
+# ============================================================
+
+/docs/_build/
+/html/
+/latex/
+
+# ============================================================
+# PROJECT-SPECIFIC LOCAL FILES
+# ============================================================
+
+# Temporary editor and script outputs
+*.stackdump
+*.dSYM/
+*.gcov.json.gz
