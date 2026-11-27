@@ -1,28 +1,35 @@
 #include <_time.h>
 #include <pthread.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 
-void *customThreadFunction(void *arg) {
-  for (int i = 0; i < 5; i++) {
-    printf("I am a custom thread function created by Emran.\n");
-    sleep(1);
-    if (i == 3) {
-      printf("My job is Done. I am now Being terminated by the programmer. \n");
-      pthread_exit(NULL);
-    }
-  }
+struct arguments {
+  char *name;
+  int age;
+  char *bloodgroup;
+};
+
+// Thread function
+// this creates a pointer that points to a struct, which cast to a void pointer
+// as (void *) and passes to the pthread_thread function.
+void *sayGreetings(void *data) {
+  printf("Name: %s", ((struct arguments *)data)->name);
+  printf("Age: %d\n", ((struct arguments *)data)->age);
+  printf("BloodGroup: %s\n", ((struct arguments *)data)->bloodgroup);
   return NULL;
-}
+};
 
 int main() {
-  pthread_t thread;
-  pthread_create(&thread, NULL, customThreadFunction, NULL);
-
-  for (int i = 0; i < 5; i++) {
-    printf("I am the process thread created by the compiler by default. \n");
-    sleep(1);
-  }
-
-  return 0;
+  struct arguments *person =
+      (struct arguments *)malloc(sizeof(struct arguments));
+  printf("This is a simple data collection applictaion. \n");
+  char bloodgroup[5], name[50];
+  int age;
+  printf("Enter the name of the person: ");
+  fgets(name, 50, stdin);
+  printf("Enter the age of the person: ");
+  scanf("%d", age);
+  printf("Enter the person's Bloodgroup: ");
+  scanf("%s", bloodgroup);
 }
