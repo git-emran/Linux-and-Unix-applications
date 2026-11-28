@@ -29,7 +29,16 @@ int main() {
   printf("Enter the name of the person: ");
   fgets(name, 50, stdin);
   printf("Enter the age of the person: ");
-  scanf("%d", age);
+  scanf("%d", &age);
   printf("Enter the person's Bloodgroup: ");
   scanf("%s", bloodgroup);
+
+  person->name = name;
+  person->age = age;
+  person->bloodgroup = bloodgroup;
+
+  pthread_t thread;
+  pthread_create(&thread, NULL, sayGreetings, (void *)person);
+  pthread_join(thread, NULL);
+  return 0;
 }
